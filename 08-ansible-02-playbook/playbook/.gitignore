@@ -1,1 +1,3 @@
 files/*
+old_site.yml
+ansible.cfg
