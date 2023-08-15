@@ -10,6 +10,11 @@
 ## Основная часть
 
 1. Подготовьте свой inventory-файл `prod.yml`.
+
+
+### Ответ: 
+    Подготавливаем inventory-файл [`prod.yml`](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/08-ansible-02-playbook/playbook/inventory/prod.yml)
+
 2. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает [vector](https://vector.dev). Конфигурация vector должна деплоиться через template файл jinja2.
 3. При создании tasks рекомендую использовать модули: `get_url`, `template`, `unarchive`, `file`.
 4. Tasks должны: скачать дистрибутив нужной версии, выполнить распаковку в выбранную директорию, установить vector.
