@@ -13,15 +13,214 @@
 
 
 ### Ответ: 
-    Подготавливаем inventory-файл [`prod.yml`](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/08-ansible-02-playbook/playbook/inventory/prod.yml)
+Подготавливаем inventory-файл [`prod.yml`](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/08-ansible-02-playbook/playbook/inventory/prod.yml)
 
 2. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает [vector](https://vector.dev). Конфигурация vector должна деплоиться через template файл jinja2.
+
+### Ответ: 
+Дописал: [vars.yml](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/08-ansible-02-playbook/playbook/group_vars/clickhouse/vars.yml) и [site.ym](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/08-ansible-02-playbook/playbook/site.yml)
+
 3. При создании tasks рекомендую использовать модули: `get_url`, `template`, `unarchive`, `file`.
 4. Tasks должны: скачать дистрибутив нужной версии, выполнить распаковку в выбранную директорию, установить vector.
+
+### Ответ: 
+```yaml
+[root@b47fbf673666 ~]# vector --version
+vector 0.31.0 (x86_64-unknown-linux-gnu 0f13b22 2023-07-06 13:52:34.591204470)
+```
 5. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть.
+
+### Ответ: 
+```yaml
+[user@centos8 playbook]$ ansible-lint site.yml
+
+Passed: 0 failure(s), 0 warning(s) on 1 files. Last profile that met the validation criteria was 'production'.
+```
+
 6. Попробуйте запустить playbook на этом окружении с флагом `--check`.
+
+### Ответ: 
+```yaml
+[user@centos8 playbook]$ ansible-playbook -u root -i inventory/prod.yml site.yml --check --ask-pass
+SSH password: 
+
+PLAY [Install Clickhouse] **************************************************************************
+
+TASK [Gathering Facts] *****************************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Get clickhouse distrib] **********************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01] => (item=clickhouse-client)
+ok: [clickhouse-01] => (item=clickhouse-server)
+failed: [clickhouse-01] (item=clickhouse-common-static) => {"ansible_loop_var": "item", "changed": false, "dest": "./clickhouse-common-static-22.3.3.44.rpm", "elapsed": 0, "gid": 0, "group": "root", "item": "clickhouse-common-static", "mode": "0644", "msg": "Request failed", "owner": "root", "response": "HTTP Error 404: Not Found", "size": 246310036, "state": "file", "status_code": 404, "uid": 0, "url": "https://packages.clickhouse.com/rpm/stable/clickhouse-common-static-22.3.3.44.noarch.rpm"}
+
+TASK [Get clickhouse distrib (rescue)] *************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Install clickhouse packages] *****************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Flush handlers to restart clickhouse] ********************************************************
+
+TASK [Create database] *****************************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+skipping: [clickhouse-01]
+
+PLAY [Install vector] ******************************************************************************
+
+TASK [Gathering Facts] *****************************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Get vector distrib] **************************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Install vector packages] *********************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Flush handlers to restart vector] ************************************************************
+
+PLAY RECAP *****************************************************************************************
+clickhouse-01              : ok=6    changed=0    unreachable=0    failed=0    skipped=1    rescued=1    ignored=0   
+```
+
 7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
+
+### Ответ: 
+```yaml
+[user@centos8 playbook]$ ansible-playbook -u root -i inventory/prod.yml site.yml --diff --ask-pass
+SSH password: 
+
+PLAY [Install Clickhouse] **************************************************************************
+
+TASK [Gathering Facts] *****************************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Get clickhouse distrib] **********************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01] => (item=clickhouse-client)
+ok: [clickhouse-01] => (item=clickhouse-server)
+failed: [clickhouse-01] (item=clickhouse-common-static) => {"ansible_loop_var": "item", "changed": false, "dest": "./clickhouse-common-static-22.3.3.44.rpm", "elapsed": 0, "gid": 0, "group": "root", "item": "clickhouse-common-static", "mode": "0644", "msg": "Request failed", "owner": "root", "response": "HTTP Error 404: Not Found", "size": 246310036, "state": "file", "status_code": 404, "uid": 0, "url": "https://packages.clickhouse.com/rpm/stable/clickhouse-common-static-22.3.3.44.noarch.rpm"}
+
+TASK [Get clickhouse distrib (rescue)] *************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Install clickhouse packages] *****************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Flush handlers to restart clickhouse] ********************************************************
+
+TASK [Create database] *****************************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+PLAY [Install vector] ******************************************************************************
+
+TASK [Gathering Facts] *****************************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Get vector distrib] **************************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Install vector packages] *********************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Flush handlers to restart vector] ************************************************************
+
+PLAY RECAP *****************************************************************************************
+clickhouse-01              : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=1    ignored=0   
+```
+
 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
+
+### Ответ: 
+Playbook идемпотентен.
+```yaml
+[user@centos8 playbook]$ ansible-playbook -u root -i inventory/prod.yml site.yml --diff --ask-pass
+SSH password: 
+
+PLAY [Install Clickhouse] **************************************************************************
+
+TASK [Gathering Facts] *****************************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Get clickhouse distrib] **********************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01] => (item=clickhouse-client)
+ok: [clickhouse-01] => (item=clickhouse-server)
+failed: [clickhouse-01] (item=clickhouse-common-static) => {"ansible_loop_var": "item", "changed": false, "dest": "./clickhouse-common-static-22.3.3.44.rpm", "elapsed": 0, "gid": 0, "group": "root", "item": "clickhouse-common-static", "mode": "0644", "msg": "Request failed", "owner": "root", "response": "HTTP Error 404: Not Found", "size": 246310036, "state": "file", "status_code": 404, "uid": 0, "url": "https://packages.clickhouse.com/rpm/stable/clickhouse-common-static-22.3.3.44.noarch.rpm"}
+
+TASK [Get clickhouse distrib (rescue)] *************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Install clickhouse packages] *****************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Flush handlers to restart clickhouse] ********************************************************
+
+TASK [Create database] *****************************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+PLAY [Install vector] ******************************************************************************
+
+TASK [Gathering Facts] *****************************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Get vector distrib] **************************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Install vector packages] *********************************************************************
+[WARNING]: sftp transfer mechanism failed on [172.17.0.2]. Use ANSIBLE_DEBUG=1 to see detailed
+information
+ok: [clickhouse-01]
+
+TASK [Flush handlers to restart vector] ************************************************************
+
+PLAY RECAP *****************************************************************************************
+clickhouse-01              : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=1    ignored=0   
+```
+
 9. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги. Пример качественной документации ansible playbook по [ссылке](https://github.com/opensearch-project/ansible-playbook).
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-02-playbook` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
