@@ -24,6 +24,7 @@
 4. Tasks должны: скачать дистрибутив нужной версии, выполнить распаковку в выбранную директорию, установить vector.
 
 ### Ответ: 
+При выполнении Tasks скачался vector 0.31.0 и установился на удаленной машине.
 ```yaml
 [root@b47fbf673666 ~]# vector --version
 vector 0.31.0 (x86_64-unknown-linux-gnu 0f13b22 2023-07-06 13:52:34.591204470)
@@ -75,6 +76,8 @@ Passed: 0 failure(s), 0 warning(s) on 1 files. Last profile that met the validat
 6. Попробуйте запустить playbook на этом окружении с флагом `--check`.
 
 ### Ответ: 
+Запускаем playbook с флагом --check:
+
 ```yaml
 [user@centos8 playbook]$ ansible-playbook -u root -i inventory/prod.yml site.yml --check --ask-pass
 SSH password: 
@@ -136,6 +139,7 @@ clickhouse-01              : ok=6    changed=0    unreachable=0    failed=0    s
 7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
 
 ### Ответ: 
+Запускаем playbook с флагом --diff:
 ```yaml
 [user@centos8 playbook]$ ansible-playbook -u root -i inventory/prod.yml site.yml --diff --ask-pass
 SSH password: 
@@ -197,6 +201,7 @@ clickhouse-01              : ok=7    changed=0    unreachable=0    failed=0    s
 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
 
 ### Ответ: 
+Еще раз запускаем playbook с флагом --diff:
 Playbook идемпотентен.
 ```yaml
 [user@centos8 playbook]$ ansible-playbook -u root -i inventory/prod.yml site.yml --diff --ask-pass
