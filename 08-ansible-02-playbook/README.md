@@ -31,6 +31,41 @@ vector 0.31.0 (x86_64-unknown-linux-gnu 0f13b22 2023-07-06 13:52:34.591204470)
 5. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть.
 
 ### Ответ: 
+Ошибки:
+```yaml
+[root@centos8 playbook]# ansible-lint site.yml
+WARNING  Listing 6 violation(s) that are fatal
+name[missing]: All tasks should be named.
+site.yml:11 Task/Handler: block/always/rescue 
+
+risky-file-permissions: File permissions unset or incorrect.
+site.yml:12 Task/Handler: Get clickhouse distrib
+
+risky-file-permissions: File permissions unset or incorrect.
+site.yml:18 Task/Handler: Get clickhouse distrib
+
+fqcn[action-core]: Use FQCN for builtin module actions (meta).
+site.yml:30 Use `ansible.builtin.meta` or `ansible.legacy.meta` instead.
+
+jinja[spacing]: Jinja2 spacing could be improved: create_db.rc != 0 and create_db.rc !=82 -> create_db.rc != 0 and create_db.rc != 82 (warning)
+site.yml:32 Jinja2 template rewrite recommendation: `create_db.rc != 0 and create_db.rc != 82`.
+
+yaml[new-line-at-end-of-file]: No new line character at the end of file
+site.yml:59
+
+Read documentation for instructions on how to ignore specific rule violations.
+
+                       Rule Violation Summary                        
+ count tag                           profile    rule associated tags 
+     1 jinja[spacing]                basic      formatting (warning) 
+     1 name[missing]                 basic      idiom                
+     1 yaml[new-line-at-end-of-file] basic      formatting, yaml     
+     2 risky-file-permissions        safety     unpredictability     
+     1 fqcn[action-core]             production formatting           
+
+Failed: 5 failure(s), 1 warning(s) on 1 files. Last profile that met the validation criteria was 'min'.
+```
+Исправил ошибки:
 ```yaml
 [user@centos8 playbook]$ ansible-lint site.yml
 
