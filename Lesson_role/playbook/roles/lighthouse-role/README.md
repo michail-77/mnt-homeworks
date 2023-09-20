@@ -18,7 +18,7 @@ Role Variables
 Переменные для установки кредов
 default/main.yml:
 ```yaml
-clickhouse_user: netology
+clickhouse_user: root
 clickhouse_password: netology
 ```
 
@@ -32,8 +32,6 @@ lighthouse_access_log_name: lighthouse_access
 
 Dependencies
 ------------
-
-Требуется роль [clickhouse-role](https://github.com/danilabar/clickhouse-role)
 
 Example Playbook
 ----------------
