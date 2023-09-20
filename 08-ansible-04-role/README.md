@@ -35,7 +35,8 @@
 ```
 ###Ответ:
 Скачал данную роль:     
-```[clickhouse](https://github.com/michail-77/mnt-homeworks/tree/MNT-video/Lesson_role/roles/clickhouse)
+```
+[clickhouse](https://github.com/michail-77/mnt-homeworks/tree/MNT-video/Lesson_role/roles/clickhouse)
 
 3. Создайте новый каталог с ролью при помощи `ansible-galaxy role init vector-role`.
 ```
