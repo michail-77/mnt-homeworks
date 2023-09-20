@@ -62,7 +62,7 @@
 [lighthouse-role](https://github.com/michail-77/lighthouse-role)  
 [vector-role](https://github.com/michail-77/vector-role)  
 [playbook](https://github.com/michail-77/mnt-homeworks/tree/MNT-video/Lesson_role/playbook)  
-
+  
 ---
 
 ### Как оформить решение задания
