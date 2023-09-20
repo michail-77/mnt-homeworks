@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: admin
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCyyX/dMsH1kVsWT7YXk3nYgeS3thYxGu9QWupFzLc/MWjCGfuQVTA1YCTFMf8ESohw7Xpnj2xQICDyE8pN1Lb1M2V3fvlhGjxPdgX1+bPp4s7XqyuQh5tiMmUcnfjM2yqWRckPjPtSfa8jNA3+Rnj+xR+Yfl2e/dOpC1TCxs4V3asT8B+tDEosX28ZcMizCVPQuCtD7kTpBDfpxBCa/oxelQMqj6fvV0JcTDDjUxO4s7spcIb70VX2F4sJciVb2kZYip0Gf3urlhXQjn6OAcEOLwz6TqFvVR5h9oHmd6GTY3lumDe6qXGQoJ9B8wfXjrtXlo7mslaRPPVuIdIW6UpTLLPEMN79JslQkkBhH+tkxOx6OO3nikVIT5KhSGkrdNMVFcUhVtSY4/9rsWV0lflU8unkxZ7uSArJeT/efs/UW9dUgGUvgdbowfGKmrcEiO/q/Ar+DdLNvGtiRj+Wr09ipmMLPJK90voCi/FGwt8mXM69ucQIhR+eZa9cEXOOYnc= user@centos8.localdomain"

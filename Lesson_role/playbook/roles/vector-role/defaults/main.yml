@@ -1,0 +1,5 @@
+---
+# defaults file for vector-role
+clickhouse_user: root
+clickhouse_password: netology
+vector_force_reinstall: true
