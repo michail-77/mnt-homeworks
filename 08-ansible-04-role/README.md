@@ -42,66 +42,26 @@
 
 3. Создайте новый каталог с ролью при помощи `ansible-galaxy role init vector-role`.
 
-#### Ответ:
-```
-
-```
-
 4. На основе tasks из старого playbook заполните новую role. Разнесите переменные между `vars` и `default`. 
-
-#### Ответ:
-```
-
-```
 
 5. Перенести нужные шаблоны конфигов в `templates`.
 
-#### Ответ:
-```
-
-```
-
 6. Опишите в `README.md` обе роли и их параметры. Пример качественной документации ansible role [по ссылке](https://github.com/cloudalchemy/ansible-prometheus).
-
-#### Ответ:
-```
-
-```
 
 7. Повторите шаги 3–6 для LightHouse. Помните, что одна роль должна настраивать один продукт.
 
-#### Ответ:
-```
-
-```
-
 8. Выложите все roles в репозитории. Проставьте теги, используя семантическую нумерацию. Добавьте roles в `requirements.yml` в playbook.
-
-#### Ответ:
-```
-
-```
 
 9. Переработайте playbook на использование roles. Не забудьте про зависимости LightHouse и возможности совмещения `roles` с `tasks`.
 
-#### Ответ:
-```
-
-```
-
 10. Выложите playbook в репозиторий.
-
-#### Ответ:
-```
-
-```
 
 11. В ответе дайте ссылки на оба репозитория с roles и одну ссылку на репозиторий с playbook.
 
 #### Ответ:
-```
-
-```
+[lighthouse-role](https://github.com/michail-77/lighthouse-role)
+[vector-role](https://github.com/michail-77/vector-role)
+[playbook](https://github.com/michail-77/mnt-homeworks/tree/MNT-video/Lesson_role/playbook)
 
 ---
 
