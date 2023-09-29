@@ -16,7 +16,7 @@ vector_config:
       inputs:
         - local_logs
       database: logs
-      endpoint: http://{{ hostvars['clickhouse-01'].ansible_host }}:9000
+      endpoint: http://{{ hostvars['clickhouse-01'].ansible_host }}:8123
       table: vector_internal_logs
       auth:
         user: "{{ clickhouse_user }}"

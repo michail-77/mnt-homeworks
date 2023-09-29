@@ -41,3 +41,10 @@
     mode: 0644
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_gid }}"
+- name: Start Vector service
+  become: true
+  systemd:
+    name: vector
+    state: started
+    daemon_reload: true
+#  when: ansible_facts.virtualization_type != "docker"
