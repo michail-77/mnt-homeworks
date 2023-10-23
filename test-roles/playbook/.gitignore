@@ -1,0 +1,6 @@
+files/*
+old_site.yml
+ansible.cfg
+ssh-key.yml
+y.pub
+ignore_errors
