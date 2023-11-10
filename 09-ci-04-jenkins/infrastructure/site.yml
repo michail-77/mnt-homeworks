@@ -91,7 +91,6 @@
       yum:
         name:
           - git
- #         - python3
           - docker-ce
           - docker-ce-cli
           - containerd.io
@@ -99,13 +98,13 @@
     - name: Update pip
       become_user: root
       pip:
-        executable: pip3.9
+        executable: pip3
         name: pip
         extra_args: --upgrade
     - name: Install Ansible
       become_user: root
       pip:
-        executable: pip3.9
+        executable: pip3
         name:
           - selinux
           - ansible<3.0
@@ -113,7 +112,7 @@
     - name: Reinstall Selinux
       become_user: root
       pip:
-        executable: pip3.9
+        executable: pip3
         name:
           - selinux
         state: forcereinstall
