@@ -16,8 +16,11 @@
 
 1. Сделать Freestyle Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
 ![4](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/freestyle.png)
-![5]()
+![5](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/freestyle2.png)
+
 2. Сделать Declarative Pipeline Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
+![7](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/DeclarativePipelineJob.png)
+
 3. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
 4. Создать Multibranch Pipeline на запуск `Jenkinsfile` из репозитория.
 5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
