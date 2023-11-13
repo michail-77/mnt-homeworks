@@ -91,7 +91,6 @@
       yum:
         name:
           - git
-          - python3
           - docker-ce
           - docker-ce-cli
           - containerd.io
