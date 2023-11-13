@@ -19,22 +19,22 @@
 ![5](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/freestyle2.png)
 
 2. Сделать Declarative Pipeline Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
-![7](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/DeclarativePipelineJob.png)
+![6](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/DeclarativePipelineJob.png)
 
 3. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
-![8](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/jenkinsfile.png)
+![7](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/jenkinsfile.png)
 
 4. Создать Multibranch Pipeline на запуск `Jenkinsfile` из репозитория.
-![9](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/multybranch.png)
-![10](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/multybranch2.png)
+![8](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/multybranch.png)
+![9](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/multybranch2.png)
 
 5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
-![11](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/script.jpg)
+![10](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/script.jpg)
 
 6. Внести необходимые изменения, чтобы Pipeline запускал `ansible-playbook` без флагов `--check --diff`, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами `--check --diff`.
-
+![11](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/без%20флагов.jpg)
 7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
-![11](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/scripted.png)
+![12](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/scripted.png)
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
 
 
