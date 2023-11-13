@@ -4,6 +4,7 @@
 
 1. Создать два VM: для jenkins-master и jenkins-agent.
 
+
 2. Установить Jenkins при помощи playbook.
 
 3. Запустить и проверить работоспособность.
