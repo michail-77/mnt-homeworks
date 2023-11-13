@@ -3,7 +3,7 @@
 ## Подготовка к выполнению
 
 1. Создать два VM: для jenkins-master и jenkins-agent.
-
+https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/установка%20jenkins.png
 
 2. Установить Jenkins при помощи playbook.
 
