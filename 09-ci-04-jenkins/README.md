@@ -3,16 +3,20 @@
 ## Подготовка к выполнению
 
 1. Создать два VM: для jenkins-master и jenkins-agent.
-![1]()
+![1](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/вирт.машины.png)
 
 2. Установить Jenkins при помощи playbook.
+![2](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/вирт.машины.png)
 
 3. Запустить и проверить работоспособность.
 4. Сделать первоначальную настройку.
+![3](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/узлы.png)
 
 ## Основная часть
 
 1. Сделать Freestyle Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
+![4](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/freestyle.png)
+![5]()
 2. Сделать Declarative Pipeline Job, который будет запускать `molecule test` из любого вашего репозитория с ролью.
 3. Перенести Declarative Pipeline в репозиторий в файл `Jenkinsfile`.
 4. Создать Multibranch Pipeline на запуск `Jenkinsfile` из репозитория.
