@@ -6,7 +6,7 @@
 ![1](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/вирт.машины.png)
 
 2. Установить Jenkins при помощи playbook.
-![2](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/вирт.машины.png)
+![2](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/установка%20jenkins.png)
 
 3. Запустить и проверить работоспособность.
 4. Сделать первоначальную настройку.
