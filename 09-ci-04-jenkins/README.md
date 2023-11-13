@@ -29,11 +29,15 @@
 ![10](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/multybranch2.png)
 
 5. Создать Scripted Pipeline, наполнить его скриптом из [pipeline](./pipeline).
+![11](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/script.jpg)
 
 6. Внести необходимые изменения, чтобы Pipeline запускал `ansible-playbook` без флагов `--check --diff`, если не установлен параметр при запуске джобы (prod_run = True). По умолчанию параметр имеет значение False и запускает прогон с флагами `--check --diff`.
+
 7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
 ![11](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/scripted.png)
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
+
+
 9. Сопроводите процесс настройки скриншотами для каждого пункта задания!!
 
 ## Необязательная часть
