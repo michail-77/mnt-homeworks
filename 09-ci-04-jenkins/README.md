@@ -36,8 +36,8 @@
 7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
 ![12](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/09-ci-04-jenkins/image/scripted.png)
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline. 
- 
-[vector-role](https://github.com/michail-77/vector-role-molecule/tree/main)  
+
+[Vector-role](https://github.com/michail-77/vector-role-molecule/tree/main)  
 [Declarative_Pipeline](https://github.com/michail-77/vector-role-molecule/blob/main/Jenkinsfile)  
 [Scripted_Pipeline](https://github.com/michail-77/vector-role-molecule/blob/main/ScriptedJenkinsfile)  
 
