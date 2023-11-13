@@ -15,7 +15,7 @@
 ### Ответ: 
 Подготавливаем inventory-файл [`prod.yml`](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/08-ansible-02-playbook/playbook/inventory/prod.yml)
 
-2. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает [vector](https://vector.dev). Конфигурация vector должна деплоиться через template файл jinja2.
+2. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает [vector](https://vector.dev). Конфигурация vector должна деплоиться через template файл jinja2. От вас не требуется использовать все возможности шаблонизатора, просто вставьте стандартный конфиг в template файл. Информация по шаблонам по [ссылке](https://www.dmosk.ru/instruktions.php?object=ansible-nginx-install).
 
 ### Ответ: 
 Дописал: [vars.yml](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/08-ansible-02-playbook/playbook/group_vars/clickhouse/vars.yml) и [site.ym](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/08-ansible-02-playbook/playbook/site.yml)

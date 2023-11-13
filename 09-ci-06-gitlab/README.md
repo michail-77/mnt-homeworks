@@ -2,10 +2,16 @@
 
 ## Подготовка к выполнению
 
-1. Подготовьте к работе GitLab [по инструкции](https://cloud.yandex.ru/docs/tutorials/infrastructure-management/gitlab-containers).
-2. Создайте свой новый проект.
-3. Создайте новый репозиторий в GitLab, наполните его [файлами](./repository).
-4. Проект должен быть публичным, остальные настройки по желанию.
+
+1. Или подготовьте к работе Managed GitLab от yandex cloud [по инструкции](https://cloud.yandex.ru/docs/managed-gitlab/operations/instance/instance-create) .
+Или создайте виртуальную машину из публичного образа [по инструкции](https://cloud.yandex.ru/marketplace/products/yc/gitlab ) .
+2. Создайте виртуальную машину и установите на нее gitlab runner, подключите к вашему серверу gitlab  [по инструкции](https://docs.gitlab.com/runner/install/linux-repository.html) .
+
+3. (* Необязательное задание повышенной сложности. )  Если вы уже знакомы с k8s попробуйте выполнить задание, запустив gitlab server и gitlab runner в k8s  [по инструкции](https://cloud.yandex.ru/docs/tutorials/infrastructure-management/gitlab-containers). 
+
+4. Создайте свой новый проект.
+5. Создайте новый репозиторий в GitLab, наполните его [файлами](./repository).
+6. Проект должен быть публичным, остальные настройки по желанию.
 
 ## Основная часть
 
@@ -20,8 +26,6 @@
 5. Скрипт из репозитория размещён в /python_api.
 6. Точка вызова: запуск скрипта.
 7. При комите в любую ветку должен собираться docker image с форматом имени hello:gitlab-$CI_COMMIT_SHORT_SHA . Образ должен быть выложен в Gitlab registry или yandex registry.   
-8.* (задание необязательное к выполению) При комите в ветку master после сборки должен подняться pod в kubernetes. Примерный pipeline для push в kubernetes по [ссылке](https://github.com/awertoss/devops-netology/blob/main/09-ci-06-gitlab/gitlab-ci.yml).
-Если вы еще не знакомы с k8s - автоматизируйте сборку и деплой приложения в docker на виртуальной машине.
 
 ### Product Owner
 
@@ -58,8 +62,4 @@
 
 ### Важно 
 После выполнения задания выключите и удалите все задействованные ресурсы в Yandex Cloud.
-
-## Необязательная часть
-
-Автомазируйте работу тестировщика — пусть у вас будет отдельный конвейер, который автоматически поднимает контейнер в docker или k8s и выполняет проверку, например, при помощи curl. На основе вывода будет приниматься решение об успешности прохождения тестирования.
 
