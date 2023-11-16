@@ -1,3 +1,0 @@
-- name: Распечатать все доступные факты
-  ansible.builtin.debug:
-    var: ansible_facts
