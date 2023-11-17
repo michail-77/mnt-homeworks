@@ -43,9 +43,9 @@
   tasks:
     - name: Lighthouse | Copy from git
       git:
-        repo: "{{ lighthouse_vcs}}"
+        repo: "https://github.com/VKCOM/lighthouse.git"
         version: master
-        dest: "{{ lighthouse_location_dir }}"
+        dest: "./lighthouse"
     - name: Lihthouse | Create lighthouse config
       become: true
       template:
