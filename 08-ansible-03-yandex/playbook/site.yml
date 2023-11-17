@@ -1,5 +1,53 @@
 ---
 # Установка Nginx
+- name: Install nginx
+  hosts: Lighthouse
+  handlers:
+    - name: start-nginx
+      become: true
+      command: nginx
+    - name : reload-nginx
+      become: true
+      command: nginx -s reload
+  tasks:
+    - name: NGINX | Install epel-release
+      become: true
+      ansible.builtin.yum:
+        name: epel-release
+        state: present
+    - name: NGINX | Install NGINX
+      become: true
+      ansible.builtin.yum:
+        name: nginx
+        state: present
+      notify: start-nginx
+    - name: NGINX | Create general config
+      become: true
+      template:
+        src: template/nginx.conf.j2
+        dest: /etc/nginx/nginx.conf
+        mode: 0644
+      notify: reload-nginx
+- name: Install Lighthouse
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - name: Install clickhouse
   hosts: clickhouse
   roles:

@@ -1,7 +1,0 @@
----
-# defaults file for vector-role
-clickhouse_user: root
-clickhouse_password: netology
-vector_config_dir: "{{ ansible_user_dir }}/vector_config"
-vector_config:
-vector_force_reinstall: true
