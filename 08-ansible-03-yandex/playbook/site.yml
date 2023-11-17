@@ -31,28 +31,42 @@
 - name: Install lighthouse
   hosts: lighthouse
   handlers:
-    - name: reload-nginx
+    - name: Restart nginx service
       become: true
-      command: nginx -s reload
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
   pre_tasks:
-    - name: Lighthouse | install dependencies
+    - name: Install unzip
       become: true
-      ansible.builtin.yum:
-        name: git
+      ansible.builtin.apt:
+        name: unzip
         state: present
+        update_cache: true
   tasks:
-    - name: Lighthouse | Copy from git
-      git:
-        repo: "https://github.com/VKCOM/lighthouse.git"
-        version: master
-        dest: "./lighthouse"
-    - name: Lihthouse | Create lighthouse config
+    - name: Get lighthouse distrib
+      ansible.builtin.get_url:
+        url: "https://github.com/VKCOM/lighthouse/archive/refs/heads/master.zip"
+        dest: "./lighthouse.zip"
+        mode: "0644"
+    - name: Unarchive lighthouse distrib into nginx
       become: true
-      template:
-        src: lighthouse.conf.j2
-        dest: /etc/nginx/conf.d/default.conf
-        mode: 0644
-      notify: reload-nginx
+      ansible.builtin.unarchive:
+        src: ./lighthouse.zip
+        dest: /var/www/html/
+        remote_src: true
+      notify: Restart nginx service
+    - name: Make nginx config
+      become: true
+      ansible.builtin.template:
+        src: /home/kali/lesson/devops-netology/08-ansible-03-yandex/templates/default.j2
+        dest: /etc/nginx/sites-enabled/default
+        mode: "0644"
+      notify: Restart nginx service
+    - name: Remove lighthouse distrib
+      ansible.builtin.file:
+        path: "./lighthouse.zip"
+        state: absent
 
 - name: Install Clickhouse
   hosts: clickhouse
