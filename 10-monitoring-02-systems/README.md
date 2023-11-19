@@ -212,3 +212,7 @@ P.P.S.: по желанию можно себя не ограничивать т
 ---
 
 https://skillbox.ru/media/code/yazyk-razmetki-markdown-shpargalka-po-sintaksisu-s-primerami/?ysclid=lp5y487sg409876754
+
+https://sysad.su/установка-docker-compose-на-debian-10-debian-11/?ysclid=lp5xgdozl5852238437
+
+https://sysad.su/установка-docker-engine-на-debian-10-x64/
