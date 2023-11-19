@@ -211,3 +211,4 @@ P.P.S.: по желанию можно себя не ограничивать т
 
 ---
 
+https://skillbox.ru/media/code/yazyk-razmetki-markdown-shpargalka-po-sintaksisu-s-primerami/?ysclid=lp5y487sg409876754
