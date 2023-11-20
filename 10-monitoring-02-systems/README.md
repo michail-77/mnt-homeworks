@@ -129,7 +129,7 @@ P.S.: если при запуске некоторые контейнеры б�
 
 Для выполнения задания приведите скриншот с отображением метрик утилизации cpu из веб-интерфейса.
 ### Ответ:  
-![cpu](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-02-systems/image/cpu.JPG)
+![cpu](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-02-systems/image/cpu-3.png)
 
 ## Задание 9.
  Изучите список [telegraf inputs](https://github.com/influxdata/telegraf/tree/master/plugins/inputs). 
