@@ -211,11 +211,3 @@ P.P.S.: по желанию можно себя не ограничивать т
 Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
 
 ---
-
-https://skillbox.ru/media/code/yazyk-razmetki-markdown-shpargalka-po-sintaksisu-s-primerami/?ysclid=lp5y487sg409876754
-
-https://sysad.su/установка-docker-compose-на-debian-10-debian-11/?ysclid=lp5xgdozl5852238437
-
-https://sysad.su/установка-docker-engine-на-debian-10-x64/
-
-https://github.com/Valdem88/dev-17_10-monitoring-02-systems-yakovlev_vs
