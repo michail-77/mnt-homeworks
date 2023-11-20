@@ -99,6 +99,7 @@ SLI = (summ_2xx_requests + summ_3xx_requests + summ_1xx_requests)/(summ_all_requ
     - Zabbix
     - VictoriaMetrics
     - Nagios
+    
 ### Ответ:  
 ```
 Push/Pull: Zabbix, VictoriaMetrics  
