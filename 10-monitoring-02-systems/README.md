@@ -99,7 +99,7 @@ SLI = (summ_2xx_requests + summ_3xx_requests + summ_1xx_requests)/(summ_all_requ
     - Zabbix
     - VictoriaMetrics
     - Nagios
-    
+
 ### Ответ:  
 ```
 Push/Pull: Zabbix, VictoriaMetrics  
@@ -217,3 +217,5 @@ https://skillbox.ru/media/code/yazyk-razmetki-markdown-shpargalka-po-sintaksisu-
 https://sysad.su/установка-docker-compose-на-debian-10-debian-11/?ysclid=lp5xgdozl5852238437
 
 https://sysad.su/установка-docker-engine-на-debian-10-x64/
+
+https://github.com/Valdem88/dev-17_10-monitoring-02-systems-yakovlev_vs
