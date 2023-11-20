@@ -101,9 +101,9 @@ SLI = (summ_2xx_requests + summ_3xx_requests + summ_1xx_requests)/(summ_all_requ
     - Nagios
 ### Ответ:  
 ```
-Push/Pull: Prometheus, Zabbix, VictoriaMetrics  
-Push: TICK  
-Pull: Nagios  
+Push/Pull: Zabbix, VictoriaMetrics  
+Push: TICK 
+Pull: Prometheus, Nagios  
 ```
 
 ## Задание 7.
