@@ -52,6 +52,8 @@
 
 1. Сохраните ваш Dashboard.Для этого перейдите в настройки Dashboard, выберите в боковом меню «JSON MODEL». Далее скопируйте отображаемое json-содержимое в отдельный файл и сохраните его.
 1. В качестве решения задания приведите листинг этого файла.
+### Ответ:
+
 
 ---
 
@@ -60,5 +62,3 @@
 Выполненное домашнее задание пришлите в виде ссылки на .md-файл в вашем репозитории.
 
 ---
-https://github.com/Firewal7/devops-netology/blob/main/10-monitoring-03-grafana.md
-https://github.com/dotsenkois/devops-netology/blob/main/10-monitoring-03-grafana/README.md
