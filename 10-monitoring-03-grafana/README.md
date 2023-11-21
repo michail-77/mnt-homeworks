@@ -32,7 +32,7 @@
 
 Изучите самостоятельно ресурсы:
 
-1. [PromQL tutorial for beginners and humans](https://valyala.medium.com/promql-tutorial-for-beginners-9ab455142085).
+1. [PromQL tutorial for beginners and humans](https://valyala.medium.com/promql-tutorial-for-beginners-9ab455142085). - ССЫЛКА НЕ РАБОТАЕТ
 1. [Understanding Machine CPU usage](https://www.robustperception.io/understanding-machine-cpu-usage).
 1. [Introduction to PromQL, the Prometheus query language](https://grafana.com/blog/2020/02/04/introduction-to-promql-the-prometheus-query-language/).
 
