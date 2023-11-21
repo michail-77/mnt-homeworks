@@ -26,7 +26,7 @@
 1. Подключите поднятый вами prometheus, как источник данных.
 1. Решение домашнего задания — скриншот веб-интерфейса grafana со списком подключенных Datasource.
 ### Ответ:
-[datasource](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-03-grafana/image/datasouse.JPG)
+![datasource](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-03-grafana/image/datasouse.JPG)
 
 ## Задание 2
 
@@ -57,7 +57,7 @@ node_memory_MemFree_bytes
 node_filesystem_avail_bytes/(1024*1024*1024)
 ```
 Для решения этого задания приведите promql-запросы для выдачи этих метрик, а также скриншот получившейся Dashboard.
-[promql](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-03-grafana/image/promql.png)
+![promql](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-03-grafana/image/promql.png)
 
 
 ## Задание 3
@@ -65,14 +65,14 @@ node_filesystem_avail_bytes/(1024*1024*1024)
 1. Создайте для каждой Dashboard подходящее правило alert — можно обратиться к первой лекции в блоке «Мониторинг».
 1. В качестве решения задания приведите скриншот вашей итоговой Dashboard.
 ### Ответ:
-[dashboard](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-03-grafana/image/dashboard.png)
+![dashboard](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-03-grafana/image/dashboard.png)
 
 ## Задание 4
 
 1. Сохраните ваш Dashboard.Для этого перейдите в настройки Dashboard, выберите в боковом меню «JSON MODEL». Далее скопируйте отображаемое json-содержимое в отдельный файл и сохраните его.
 1. В качестве решения задания приведите листинг этого файла.
 ### Ответ:
-![Json_model](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-03-grafana/json%20model)
+[Json_model](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-03-grafana/json%20model)
 
 ---
 
