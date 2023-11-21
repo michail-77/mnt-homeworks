@@ -60,3 +60,5 @@
 Выполненное домашнее задание пришлите в виде ссылки на .md-файл в вашем репозитории.
 
 ---
+https://github.com/Firewal7/devops-netology/blob/main/10-monitoring-03-grafana.md
+https://github.com/dotsenkois/devops-netology/blob/main/10-monitoring-03-grafana/README.md
