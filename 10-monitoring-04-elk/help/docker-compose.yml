@@ -50,13 +50,12 @@ services:
     volumes:
       - data02:/usr/share/elasticsearch/data:Z
     ulimits:
-      # memlock:
-      #   soft: -1
-      #   hard: -1
+      memlock:
+        soft: -1
+        hard: -1
       nofile:
         soft: 65536
         hard: 65536
-    mem_limit: 2G
     networks:
       - elastic
 
