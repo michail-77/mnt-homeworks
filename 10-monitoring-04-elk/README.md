@@ -43,6 +43,10 @@ Filebeat следует сконфигурировать для отправки
 - скриншот интерфейса kibana;
 - docker-compose манифест (если вы не использовали директорию help);
 - ваши yml-конфигурации для стека (если вы не использовали директорию help).
+### Ответ:
+![docker_ps](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-04-elk/image/docker_ps.JPG)
+![kibana](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-04-elk/image/home.JPG)
+Использовал директорию help.
 
 ## Задание 2
 
@@ -52,6 +56,9 @@ Filebeat следует сконфигурировать для отправки
 
 В манифесте директории help также приведенно dummy-приложение, которое генерирует рандомные события в stdout-контейнера.
 Эти логи должны порождать индекс logstash-* в elasticsearch. Если этого индекса нет — воспользуйтесь советами и источниками из раздела «Дополнительные ссылки» этого задания.
+### Ответ:
+![logstash](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-04-elk/image/logstash.JPG)
+
  
 ---
 

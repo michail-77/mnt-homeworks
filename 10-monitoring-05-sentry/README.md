@@ -18,6 +18,8 @@ Free Cloud account имеет ограничения:
 - далее следуйте инструкциям.
 
 В качестве решения задания пришлите скриншот меню Projects.
+### Ответ:
+![Project](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-05-sentry/image/меню%20Projects.JPG)
 
 ## Задание 2
 
@@ -25,6 +27,12 @@ Free Cloud account имеет ограничения:
 1. Изучите информацию, представленную в событии.
 1. Перейдите в список событий проекта, выберите созданное вами и нажмите `Resolved`.
 1. В качестве решения задание предоставьте скриншот `Stack trace` из этого события и список событий проекта после нажатия `Resolved`.
+### Ответ:
+![Resolve](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-05-sentry/image/python%20project.JPG)
+
+![resolved](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-05-sentry/image/resolved.JPG)
+
+![issue](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-05-sentry/image/issue.JPG)
 
 ## Задание 3
 
@@ -37,6 +45,8 @@ Free Cloud account имеет ограничения:
 Также проверьте проект, в котором вы создаёте событие — возможно алёрт привязан к другому.
 5. В качестве решения задания пришлите скриншот тела сообщения из оповещения на почте.
 6. Дополнительно поэкспериментируйте с правилами алёртинга. Выбирайте разные условия отправки и создавайте sample events. 
+### Ответ:
+![mail](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/10-monitoring-05-sentry/image/mail.JPG)
 
 ## Задание повышенной сложности
 
