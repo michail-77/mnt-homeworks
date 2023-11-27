@@ -48,8 +48,7 @@ INFO     Initialized scenario in /root/ansible_role/roles/vector-role/molecule/d
  - Провёл тестирование роли на ubuntu molecule test -s ubuntu_latest
 ![](https://github.com/michail-77/mnt-homeworks/blob/MNT-video/08-ansible-05-testing/image/2.jpg)
 
-5. 
-[ссылка](https://github.com/Valdem88/dev-17_ansible-04-role-yakovlev_vs/tree/1.0.2/roles/vector-role)
+
 
 ### Tox
 
@@ -1480,7 +1479,7 @@ ________________________________________________________________ summary _______
 
 7.
 
-[Ссылка](https://github.com/Valdem88/dev-17_ansible-04-role-yakovlev_vs/tree/1.0.3/roles/vector-role)
+[Ссылка](https://github.com/michail-77/roles/blob/main/vector-role/vars/main.yml)
 ## Необязательная часть
 
 1. Проделайте схожие манипуляции для создания роли lighthouse.
