@@ -31,7 +31,7 @@ aragast/netology          latest           b453a84e3f7a   4 weeks ago     2.46GB
 5. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
 #### Решение 
 1.
-![](pic/molecule_test_c8.jpg)
+![](1.jpg)
 2.
 ```bash
 root@server1:~/ansible_role/roles/vector-role# molecule init scenario --driver-name docker
